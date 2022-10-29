@@ -1,0 +1,78 @@
+@import './Variables.scss';
+
+// FONTS
+@font-face {
+  font-family: 'Glacial-Bold';
+  src: url('../utils/fonts/GlacialIndifference-Bold.otf');
+}
+@font-face {
+  font-family: 'Glacial-Regular';
+  src: url('../utils/fonts/GlacialIndifference-Regular.otf');
+}
+@font-face {
+  font-family: 'Glacial-Italic';
+  src: url('../utils/fonts/GlacialIndifference-Italic.otf');
+}
+@font-face {
+  font-family: 'Luthier';
+  src: url('../utils/fonts/Luthier-Regular.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Glacial-Regular';
+  scroll-behavior: smooth;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  border: 0.25rem solid $gold-color;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner 0.75s linear infinite;
+  margin: 0 auto 2rem;
+}

@@ -1,0 +1,115 @@
+@import '../../Variables.scss';
+
+.dashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.dashContent {
+  width: calc(100% - #{$nav-width});
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: #{$paddingTop} 50px;
+
+  .headFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
+    & > button {
+      font-size: 16px;
+      font-family: 'Glacial-Regular';
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.2s ease;
+      background-color: lightgrey;
+
+      &:hover {
+        background-color: $hover-gold-color;
+      }
+    }
+  }
+
+  .Table {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+      th {
+        font-size: 17px;
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 15px 10px;
+        border-bottom: 1px solid #ddd;
+        word-break: break-all;
+      }
+
+      &:nth-child(even) {
+        background-color: $light-background-color;
+      }
+    }
+
+    &.contactTable {
+      tr th,
+      td {
+        &:nth-child(1) {
+          width: 20%;
+        }
+        &:nth-child(2) {
+          width: 20%;
+        }
+        &:nth-child(3) {
+          width: 20%;
+        }
+        &:nth-child(4) {
+          width: 40%;
+        }
+      }
+    }
+
+    &.transTable {
+      tr th,
+      td {
+        &:nth-child(1) {
+          width: 15%;
+        }
+        &:nth-child(2) {
+          width: 20%;
+          padding: 15px 20px;
+        }
+        &:nth-child(3) {
+          width: 30%;
+          padding: 15px 25px;
+        }
+        &:nth-child(4) {
+          width: 10%;
+        }
+        &:nth-child(5) {
+          width: 12%;
+        }
+        &:nth-child(6) {
+          width: 10%;
+        }
+      }
+    }
+  }
+
+  .noData {
+    text-align: center;
+    margin-top: 70px;
+  }
+}

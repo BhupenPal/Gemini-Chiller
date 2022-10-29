@@ -1,0 +1,71 @@
+@import '../Variables.scss';
+
+.Footer {
+  overflow: hidden;
+  background-color: $dark-head-color;
+  padding: 50px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo img {
+    width: 240px;
+  }
+
+  .footNav {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+    font-size: 21px;
+
+    & > a {
+      margin: 8px 0;
+      text-align: right;
+    }
+  }
+}
+
+// -----------------Mobile CSS-----------------
+@media only screen and (max-width: 576px) {
+  .Footer {
+    padding: 50px 7% 70px;
+
+    .logo img {
+      width: 160px;
+    }
+
+    .footNav {
+      width: 40%;
+      font-size: 18px;
+
+      & > a {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .Footer {
+    padding: 50px 10% 70px;
+
+    .logo img {
+      width: 200px;
+    }
+    .footNav {
+      width: 40%;
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .Footer {
+    padding: 50px 10% 70px;
+
+    .footNav {
+      width: 40%;
+    }
+  }
+}

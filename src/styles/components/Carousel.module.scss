@@ -1,0 +1,43 @@
+@import '../Variables.scss';
+
+.Carousel {
+  margin-top: 100px;
+
+  div {
+    height: 300px;
+    margin: 0;
+    border-radius: 12px;
+
+    .imgBox {
+      width: 92%;
+      margin: 0 auto;
+      height: 100%;
+      background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+      }
+    }
+  }
+
+  & > button:before {
+    // color: $dark-head-color;
+  }
+  & > ul {
+    bottom: -45px;
+  }
+}
+
+// -----------------Mobile CSS-----------------
+@media only screen and (max-width: 576px) {
+  .Carousel {
+    width: 95%;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    div {
+      height: 190px;
+    }
+  }
+}
